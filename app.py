@@ -22,6 +22,8 @@ if os.path.isdir('pdf') is False:
     os.mkdir('pdf')
 if os.path.isdir('uploads') is False:
     os.mkdir('uploads')
+if os.path.isdir('static/images') is False:
+    os.mkdir('static/images')
 
 
 def order_points(pts):
