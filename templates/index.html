@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" type="text/css" href="static/style.css">
+  <title>Cloud Scanner</title>
+</head>
+<body>
+  <div class="shadow-sm mb-4 rounded">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+          <div class="float-start re">
+            <a class="navbar-brand nav-link" href="/">
+              <img src="static/logo.jpg" alt="" width="60" height="60" class="d-inline-block align-top">
+              <span class="respan"><h2>𝙲𝚕𝚘𝚞𝚍 𝚂𝚌𝚊𝚗𝚗𝚎𝚛</h2></span>
+            </a>
+          </div>
+          <div class="float-end">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse display-7" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/demo">Demo</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/about">About</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/contact" tabindex="-1" aria-disabled="true">Contact</a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row justify-content-center pt-3">
+      <div class="col pt-5 hello">
+        <div class="pt-5">
+          <h1 class="display-2 fw-bold">Welcome!</h1>
+          <h3 class="pb-4 fw-light">Cloud Scanner is an easy-to-use open-source document scanner.</h3>
+          <a href="/demo"><button type="button" class="btn btn-info">View demo</button></a>
+          
+        </div>
+        <div class="pt-5">
+          <p class="pt-5">
+            <a href="#"><img src="https://img.icons8.com/color/48/000000/email.png"/></a>&nbsp;&nbsp;
+            <a href="#"><img src="https://img.icons8.com/material-sharp/48/4a90e2/github.png"/></a>&nbsp;&nbsp;
+            <a href="#"><img src="https://img.icons8.com/fluent/48/000000/facebook-new.png"/></a>&nbsp;&nbsp;
+            <a href="#"><img src="https://img.icons8.com/fluent/48/000000/twitter.png"/></a>&nbsp;&nbsp;
+          </p>
+        </div>
+      </div>
+      <div class="col">
+        <div class="shadow p-3 mb-5 bg-body rounded">
+          <img src="static/design.webp" alt="freelancer_image" class="freelancer">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="flow">
+      <img src="static/playstore1.png" alt="get it on playstore or appstore" class="foot">
+      <img src="static/appstore1.png" alt="get it on playstore or appstore" class="foot">
+    </div>
+  </div>
+</body>
+</html>

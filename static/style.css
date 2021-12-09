@@ -1,0 +1,116 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-family: "Lato", sans-serif;
+    text-rendering: optimizeLegibility;
+}
+
+body {
+    background-image: url(footer.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    height: 100vh;
+}
+
+.navc {
+    /* background-color: #f3fdff; */
+    background-color: #F0F8FE;
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+.display-7 {
+    font-size: 1.1rem;
+}
+
+.active {
+    font-size: 110%;
+}
+
+.freelancer {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+.display-1 {
+    font-weight: 500;
+}
+
+.re {
+    position: relative;
+}
+.btn-primary {
+    background-color: red;
+}
+
+.respan {
+    position: absolute;
+    padding-top: 0.6rem;
+    padding-left: 0.9rem;
+    font-weight: 2rem;
+}
+
+.formdeco {
+    width: 100%;
+    box-sizing: border-box;
+    border: 2px solid #3498db;
+    padding: 0.8rem 1rem;
+    border-radius: 7px;
+    margin-bottom: 0.5rem;
+    transition: all 0.3s ease 0s;
+}
+.formdeco:focus {
+    outline: none;
+}
+
+.formdeco1 {
+    width: 100%;
+    box-sizing: border-box;
+    border: 2px solid #e74c3c;
+    padding: 0.8rem 1rem;
+    border-radius: 7px;
+    margin-bottom: 0.5rem;
+    transition: all 0.3s ease 0s;
+}
+
+.formdeco1:focus {
+    outline: none;
+}
+
+.vali {
+    color:  #e74c3c;
+}
+
+.contactme {
+    display: block;
+    width: 120%;
+    margin-top: 1rem;
+}
+
+.hello {
+    padding-left: 3rem;
+}
+
+.foot {
+    width: 15%;
+}
+
+.flow {
+    display: flex;
+    justify-content: center;
+}
+
+.flow_left {
+    display: flex;
+    justify-content: flex-start
+}
