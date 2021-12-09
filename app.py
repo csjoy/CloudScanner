@@ -15,9 +15,13 @@ from flask import Flask, request, Response, redirect, render_template, abort, se
 app = Flask(__name__)
 app.config['MAX_CONTENT_LENGTH'] = 1024*1024*2
 app.config['UPLOAD_EXTENSIONS'] = ['.jpg']
-app.config['UPLOAD_PATH'] = 'uploads'
+# app.config['UPLOAD_PATH'] = 'uploads'
 app.config['UPLOAD_APP'] = 'app'
 
+if os.path.isdir('pdf') is False:
+    os.mkdir('pdf')
+if os.path.isdir('uploads') is False:
+    os.mkdir('uploads')
 
 
 def order_points(pts):
@@ -141,8 +145,6 @@ def ImageProcess(image):
 
 @app.route("/")
 def index():
-    if os.path.isdir('pdf') is False:
-        os.mkdir('pdf')
     pdf_path = os.path.join('pdf')
     for f in os.listdir(pdf_path):
         os.remove(os.path.join(pdf_path, f))
@@ -158,7 +160,7 @@ def demo():
             file_ext = os.path.splitext(filename)[1]
             if file_ext not in app.config['UPLOAD_EXTENSIONS']:
                 abort(400)
-            path = os.path.join(app.config['UPLOAD_PATH'], filename)
+            path = os.path.join('uploads', filename)
             uploaded_file.save(path)
         return redirect("/")
 
@@ -197,7 +199,7 @@ def makePdf(pdfFileName, listPages, dir = ''):
 
 @app.route("/convert", methods=['POST'])
 def convert():
-    path = os.path.join(app.config['UPLOAD_PATH'])
+    path = os.path.join('uploads')
     pdf_path = os.path.join('pdf')
     processed = os.path.join('static', 'images')
     image_list = os.listdir(path)
