@@ -138,7 +138,7 @@ def ImageProcess(image):
     # wrap = cv2.warpPerspective(gray_image, perspective, (800, 1064))
 
     cv2.imwrite(path_file, warped)
-    print(path_file)
+    # print(path_file)
     return json.dumps(path_file)
 
 
@@ -212,17 +212,17 @@ def convert():
     #         list_pages.append(info[0])
     # print(list_pages)
     # quit()
-    print("processed", image_list)
+    # print("processed", image_list)
 
     for image in image_list:
         info = image.split('.')
         if info[1] == 'jpg':
             full_image_path = os.path.join('uploads', image)
-            print(full_image_path)
+            # print(full_image_path)
             img = cv2.imread(full_image_path)
-            print(type(img))
+            # print(type(img))
             ImageProcess(img)
-    print("*", os.listdir(processed))
+    # print("*", os.listdir(processed))
     processed_list = os.listdir(processed)
     for image in processed_list:
         info = image.split('.')
@@ -232,7 +232,7 @@ def convert():
     file_name = str(uuid.uuid4().hex)
     for f in os.listdir(pdf_path):
         os.remove(os.path.join(pdf_path, f))
-    print("##", list_pages)
+    # print("##", list_pages)
     makePdf(file_name, list_pages, 'static/images')
     for f in os.listdir(path):
         os.remove(os.path.join(path, f))
@@ -251,5 +251,5 @@ def too_large(e):
 def upload():
     img = cv2.imdecode(np.fromstring(request.files['image'].read(), np.uint8), cv2.IMREAD_UNCHANGED)
     img_processed = ImageProcess(img)
-    print(img_processed)
+    # print(img_processed)
     return Response(response=img_processed, status=200, mimetype="application/json")
