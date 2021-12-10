@@ -25,6 +25,9 @@ if os.path.isdir('uploads') is False:
 if os.path.isdir('static/images') is False:
     os.mkdir('static/images')
 
+###################################################################################################
+# https://www.pyimagesearch.com/2014/09/01/build-kick-ass-mobile-document-scanner-just-5-minutes/ #
+###################################################################################################
 
 def order_points(pts):
 	# initialzie a list of coordinates that will be ordered
@@ -130,17 +133,10 @@ def ImageProcess(image):
     warped = cv2.cvtColor(warped, cv2.COLOR_BGR2GRAY)
     T = threshold_local(warped, 95, offset = 10, method = "gaussian") # 11 , 10
     warped = (warped > T).astype("uint8") * 255
-    # show the original and scanned images
-    # print("STEP 3: Apply perspective transform")
-    # cv2.imshow("Original", imutils.resize(orig, height = 800))
-    # cv2.imshow("Scanned", imutils.resize(warped, height = 800))
-    # cv2.waitKey(0)
-
-    # perspective = cv2.getPerspectiveTransform(contour_approximation, points)
-    # wrap = cv2.warpPerspective(gray_image, perspective, (800, 1064))
-
     cv2.imwrite(path_file, warped)
-    # print(path_file)
+    ###################################################################################################
+    # https://www.pyimagesearch.com/2014/09/01/build-kick-ass-mobile-document-scanner-just-5-minutes/ #
+    ###################################################################################################
     return json.dumps(path_file)
 
 
@@ -167,8 +163,6 @@ def demo():
         return redirect("/")
 
     else:
-
-        # TODO: Display the entries in the database on index.html
         files = os.listdir('pdf')
         return render_template("demo.html", upfiles=files, le=len(files))
 
